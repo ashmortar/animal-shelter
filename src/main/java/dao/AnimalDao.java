@@ -13,13 +13,14 @@ public interface AnimalDao {
 
     //read
     List<Animal> getAll();
-//    List<Animal> getAllByType();
-//    List<Animal> getAllByBreed();
-//    List<Animal> getAllByAdmittance();
-//
-//    //update
-//    void adopt(int id, Person person);
-//
+    List<Animal> getAllByType(String type);
+    List<Animal> getAllByBreed(String breed);
+    List<Animal> getAllByAdmittance();
+    Animal findAnimalById(int id);
+
+    //update
+    void adopt(int animalId, int ownerId);
+
 //    //delete
 //    void deleteById(int id);
 //    void clearAllAnimals();

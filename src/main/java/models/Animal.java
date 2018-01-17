@@ -19,6 +19,7 @@ public class Animal {
         this.admittance = admittance;
         this.type = type;
         this.breed = breed;
+        this.adopted = false;
     }
 
     public int getId() {
