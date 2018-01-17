@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/animal-shelter.iml" filepath="$PROJECT_DIR$/.idea/modules/animal-shelter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/animal-shelter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/animal-shelter_main.iml" group="animal-shelter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/animal-shelter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/animal-shelter_test.iml" group="animal-shelter" />
+    </modules>
+  </component>
+</project>
