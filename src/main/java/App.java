@@ -153,12 +153,12 @@ public class App {
             return new ModelAndView(model, "animal-detail.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/animals/:id", (request, response) -> {
-            Map<String, Object> model = new HashMap<>();
-
-            return new ModelAndView(model, "success.hbs");
-
-        }, new HandlebarsTemplateEngine());
+//        post("/animals/:id", (request, response) -> {
+//            Map<String, Object> model = new HashMap<>();
+//
+//            return new ModelAndView(model, "success.hbs");
+//
+//        }, new HandlebarsTemplateEngine());
 
         // /persons/:id = show person detail and form to update
         get("/persons/:id", (request, response) -> {
@@ -170,13 +170,13 @@ public class App {
 
         }, new HandlebarsTemplateEngine());
 
-        post("/persons/:id", (request, response) -> {
-            Map<String, Object> model = new HashMap<>();
-
-
-            return new ModelAndView(model, "success.hbs");
-
-        }, new HandlebarsTemplateEngine());
+//        post("/persons/:id", (request, response) -> {
+//            Map<String, Object> model = new HashMap<>();
+//
+//
+//            return new ModelAndView(model, "success.hbs");
+//
+//        }, new HandlebarsTemplateEngine());
 
 
         // /animals/:id/delete = remove specific animal
