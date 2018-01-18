@@ -21,7 +21,7 @@ public interface AnimalDao {
     //update
     void adopt(int animalId, int ownerId);
 
-//    //delete
-//    void deleteById(int id);
-//    void clearAllAnimals();
+    //delete
+    void deleteById(int id);
+    void clearAllAnimals();
 }

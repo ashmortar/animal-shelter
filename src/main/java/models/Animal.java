@@ -22,14 +22,6 @@ public class Animal {
         this.adopted = false;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
@@ -84,6 +76,14 @@ public class Animal {
 
     public void setAdopted(Boolean adopted) {
         this.adopted = adopted;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

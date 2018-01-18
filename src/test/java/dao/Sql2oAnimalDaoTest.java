@@ -117,4 +117,26 @@ public class Sql2oAnimalDaoTest {
         assertEquals(true, animalDao.findAnimalById(1).getAdopted());
         assertEquals(false, animalDao.findAnimalById(2).getAdopted());
     }
+
+    @Test
+    public void deleteById_deletesCorrectly_true() throws Exception {
+        Animal animal = setupNewDog();
+        Animal secondAnimal = setupNewCat();
+        animalDao.add(animal);
+        animalDao.add(secondAnimal);
+        animalDao.deleteById(1);
+        assertEquals(1, animalDao.getAll().size());
+    }
+
+    @Test
+    public void clearAllAnimals_removesAllAnimalEntries_true() throws Exception {
+        Animal testAnimal = setupNewCat();
+        Animal secondTest = setupNewDog();
+        Animal thirdTest = setupNewDog();
+        animalDao.add(testAnimal);
+        animalDao.add(secondTest);
+        animalDao.add(thirdTest);
+        animalDao.clearAllAnimals();
+        assertEquals(0, animalDao.getAll().size());
+    }
 }

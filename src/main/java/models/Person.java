@@ -6,6 +6,7 @@ public class Person {
     private String phone;
     private String typePreference;
     private String breedPreference;
+    private int id;
 
     public Person(String name, String phone, String typePreference, String breedPreference) {
         this.name = name;
@@ -46,6 +47,14 @@ public class Person {
         this.breedPreference = breedPreference;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -53,6 +62,7 @@ public class Person {
 
         Person person = (Person) o;
 
+        if (id != person.id) return false;
         if (!name.equals(person.name)) return false;
         if (phone != null ? !phone.equals(person.phone) : person.phone != null) return false;
         if (typePreference != null ? !typePreference.equals(person.typePreference) : person.typePreference != null)
@@ -66,6 +76,7 @@ public class Person {
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         result = 31 * result + (typePreference != null ? typePreference.hashCode() : 0);
         result = 31 * result + (breedPreference != null ? breedPreference.hashCode() : 0);
+        result = 31 * result + id;
         return result;
     }
 }

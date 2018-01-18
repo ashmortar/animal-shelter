@@ -18,7 +18,7 @@ public class Sql2oAnimalDao implements AnimalDao {
 
     @Override
     public void add(Animal animal) {
-        String sql = "INSERT INTO animals(name, gender, admittance, type, breed) VALUES (:name, :gender, :admittance, :type, :breed)";
+        String sql = "INSERT INTO animals(name, gender, admittance, type, breed, adopted) VALUES (:name, :gender, :admittance, :type, :breed, false)";
         try (Connection con = sql2o.open()) {
             int id = (int) con.createQuery(sql)
                     .bind(animal)
@@ -92,5 +92,26 @@ public class Sql2oAnimalDao implements AnimalDao {
         }
     }
 
+    @Override
+    public void deleteById(int id) {
+        String sql = "DELETE from animals WHERE id = :id";
+        try (Connection con = sql2o.open()) {
+            con.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeUpdate();
+        } catch (Sql2oException ex) {
+            System.out.println(ex);
+        }
+    }
 
+    @Override
+    public void clearAllAnimals() {
+        String sql = "DELETE FROM animals";
+        try (Connection con = sql2o.open()) {
+            con.createQuery(sql)
+                    .executeUpdate();
+        } catch (Sql2oException ex) {
+            System.out.println(ex);
+        }
+    }
 }
